@@ -2,6 +2,7 @@
 
 namespace App\Http\Repositories;
 
+use App\Interfaces\Repository;
 use App\Models\User;
 
 class UserRepository
@@ -17,7 +18,7 @@ class UserRepository
 
             if (isset($data['email'])) {
                 $query->where('email', 'like',  '%' . $data['email'] . '%');
-            }
+            } 
         })->get();
     }
 
